@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            td { text-align: center;}
+            table, th, td {
+                border: 1px solid black;
+            } 
+        </style>
+        <style>
+            div h1{
+                background-color:darkgray;
+                }
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/x-icon" href="imagens/South-Korea.ico"/>
+        <link rel="stylesheet" href="estilos.css">
+            <title>Seoul</title>
+        <meta name="author" content="Tiago Pereira">
+        <meta name="keywords" content="palavras chave">
+        <meta name="description" content="Website sobre Seoul">
+    </head>
+    <body>
+        <header>
+            <body style="background-color:darkgray;"></body>
+            <h1>Seoul</h1>
+            <figure>
+                <img src="imagens/seoul.png" alt="Rua de Seoul" style="width: auto;" class="centerImg">
+                <details style="text-align: center;">Foto de uma rua nos arredores de Seoul</details>
+            </figure>
+        </header>
+        <nav style="text-align: center;">
+            <a href="html5-css.html"><span class="material-icons">first_page</span>Html5 & CSS</a>
+            <a href="quizz.html"><span class="material-icons">quiz</span>Quizz</a>
+            <a href="comentarios.html"><span class="material-icons">reviews</span>Comentários</a>
+            <a href="../index.html"><span class="material-icons">home</span>Home</a>
+            <a href="index.html"><span class="material-icons">first_page</span>Introdução</a>
+            <a href="local.html"><span class="material-icons">explore</span>Localização</a>
+            <a href="multimedia.html"><span class="material-icons">play_circle</span>Multimedia</a>
+            <a href="info.html"><span class="material-icons">info</span>Informação</a>
+        </nav>
+        <main>
+            <section>
+                <h3>Quizz</h3>
+                <form  method="POST" action="malito:a22004316@alunos.ulht.pt" autocomplete="off">
+                    <fieldset>
+                        <legend><b>Identificação</b></legend>
+                        <p>Nome: <input type="text" name="nome" required></p>
+                        <p>Idade: <input type="text" name="idade" maxlength="3" required></p>
+                        <p>Email: <input type="email" id="email" name="email" required></p>
+                        <p>Número Telemóvel: <input type="tel" id="phone" name="phone" placeholder="Ex: 925379051" size="9" required></p>
+                        <p>Género:
+                            <br>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label><br>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </p>
+                        <input type="reset" value="Limpar Dados">
+                    </fieldset>
+                    <fieldset>
+                        <legend><b>Quizz</b></legend>
+                        <p>
+                            Seoul localiza se em que continente? 
+                            <br> 
+                            <input type="text" id="país" name="país" size="15">
+                        </p>
+                        <p>Qual das seguintes bandeiras é a da Coreia do Sul:</p>
+                        <img src="imagens/bandeiraSul.png" width="175" height="100">
+                        <input style="vertical-align: middle;" type="checkbox" id="bandeira1" name="bandeira1" value="Coreia do Sul">
+                        <br>
+                        <img src="imagens/bandeiraNorte2.png" width="175" height="100">
+                        <input style="vertical-align: middle;" type="checkbox" id="bandeira2" name="bandeira2" value="Coreia do Norte">
+                        <p>
+                            <label for="dataNome">Quando é que acabou a guerra da Coreia?</label>
+                            <br>
+                            <input type="date" id="dataNome" name="dataNome" min="1950-01-01" max="1953-12-31">
+                        </p>
+                        <p>
+                            <label for="cor">Qual é a cor predominante no brasao de armas de Seoul?</label>
+                            <br>
+                            <input type="color" id="cor" name="cor" value="#FFFF00">
+                        </p>
+                        <p>
+                            <label for="população">Habitantes em Seoul (entre 1 e 15 milhões):</label>
+                            <input type="number" id="população" name="população" min="1" max="15">
+                        </p>
+                        <p>
+                            <label for="quantidade">De 0 a 10, quanto é que gostaria de visitar Seoul?</label>
+                            <br>
+                            <input type="range" id="quantidade" name="vol" min="0" max="10">
+                        </p>
+                    </fieldset>
+                    <input type="image" src="https://cdn.iconscout.com/icon/free/png-512/sent-47-1172264.png" alt="Submit" width="50" height="50">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Tiago Pereira - a22004316 - Universidade Lusófona - 2º Ano</p>
+        </footer>
+    </body>
+</html>
