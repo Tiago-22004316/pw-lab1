@@ -1,0 +1,206 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {grid-area: header;}
+nav {grid-area: menu;}
+main {grid-area: main;}
+aside {grid-area: aside;}
+footer {grid-area: footer;}
+
+h1 {text-align: center;}
+
+.centerImg{
+    margin: auto;
+    display: block;
+}
+
+h3 + p::first-letter {
+    font-size: 200%;
+}
+
+nav > a:hover {
+    color: rgb(0, 162, 255);
+}
+
+body table {
+    background-color: grey;
+}
+
+tr:nth-child(odd) {
+    background-color:rgba(0, 158, 250, 0.377);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.fixed {
+    position: fixed;
+    bottom: 2%;
+    right: 0;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2%;
+    left: 0;
+    height: 0px;
+}
+
+footer {
+    margin-bottom: -50px;
+    border-top: solid black 2px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 601px) {
+    body {
+        background-color: darkgray;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-areas:
+        'header header header'
+        'menu   menu   menu'
+        'main   main  aside'
+        'footer footer footer';
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav > div {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .fixed {
+        display: none;
+    }
+    .sticky {
+        display: none;
+    }
+    .relative {
+        display: none;
+    }
+
+    body {
+        background-color: darkblue;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'header'
+        'menu'
+        'main'
+        'aside'
+        'footer';
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav > div {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.fotografia1-1 {
+    width: 300px;
+    transition: width 2s;
+    transition-timing-function: ease-in-out;
+}
+.fotografia1-1:hover {
+    border-radius: 50%;
+    width: 350px;
+}
+
+.fotografia1-3 {
+    height: 200px;
+    transition:height 3s;
+    transition-timing-function:linear;
+}
+.fotografia1-3:hover {
+    border-radius: 50px;
+    height: 250px;
+}
+
+.fotografia2-1 {
+    height: 200px;
+    transition: height 5s;
+    transition-timing-function: ease-out;
+}
+.fotografia2-1:hover {
+    transform: scaleX(-1);
+    border-radius: 50%;
+    height: 150px;
+}
+
+.fotografia2-3 {
+    width: 300px;
+    transition: width 5s;
+    transition-timing-function: ease-in-out;
+}
+.fotografia2-3:hover {
+    transform: scaleY(-1);
+    border-radius: 50%;
+    width: 400px;
+}
+
+.fotografia3-1 {
+    width: 300px;
+    height: 200px;
+    transition: width 1s, height 4s;
+    transition-timing-function:ease;
+}
+.fotografia3-1:hover {
+    width: 350px;
+    height: 300px;
+    filter:blur(5px);
+    border-radius: 50%;
+}
+
+.fotografia3-3 {
+    width: 300px;
+    transition: width 2s;
+    transition-timing-function: ease-in;
+}
+.fotografia3-3:hover {
+    filter:opacity(15%);
+    border-radius: 50%;
+    width: 250px;
+}
+
+.fotografia4-1 {
+    width: 300px;
+    transition: width 2s;
+    transition-timing-function: linear;
+}
+.fotografia4-1:hover {
+    transform: rotate(35deg);
+    border-radius: 50%;
+    width: 350px;
+}
+
+.fotografia4-3 {
+    width: 300px;
+    transition: width 2s;
+    transition-timing-function: ease;
+}
+.fotografia4-3:hover {
+    transform: rotate(-35deg);
+    border-radius: 50%;
+    width: 350px;
+}
